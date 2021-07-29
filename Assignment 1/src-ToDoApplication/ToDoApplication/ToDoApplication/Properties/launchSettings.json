@@ -1,0 +1,8 @@
+﻿{
+  "profiles": {
+    "ToDoApplication": {
+      "commandName": "Project",
+      "commandLineArgs": "admin adminpassword"
+    }
+  }
+}
