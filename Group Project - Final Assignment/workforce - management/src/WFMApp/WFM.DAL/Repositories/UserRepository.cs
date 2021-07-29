@@ -51,8 +51,8 @@ namespace WFM.DAL.Repositories
         {
             List<Guid> teamLeaderIds = await _userManager.Users
                 .Where(u => u.Id == userId)
-                .SelectMany(x => x.Teams.Where(t => t.TeamLeaderId != userId).Distinct()
-                    .Select(t => t.TeamLeaderId)).ToListAsync();
+                .SelectMany(x => x.Teams.Where(t => t.TeamLeaderId != userId)
+                    .Select(t => t.TeamLeaderId)).Distinct().ToListAsync();
 
             List<User> teamLeaders = new List<User>();
 
